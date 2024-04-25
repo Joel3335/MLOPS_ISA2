@@ -23,10 +23,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
     - name: Build and push the Docker image
-      uses: docker/build-push-action@v1
+      uses: docker/build-push-action@v2
       with:
-        #context: DockerfileFolder/
+        context: .
         push: true
-        tags: joel033/githubActionpush:latest
+        tags: joel033/mlops:latest
         
       #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
